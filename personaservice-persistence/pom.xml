@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.walmart.service</groupId>
+  	<artifactId>personaservice-persistence</artifactId>
+  	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>generator - Persistence</name>
+	<description>Persistence Layer</description>
+
+  	<parent>
+    	<groupId>com.walmart.service</groupId>
+    	<artifactId>personaservice</artifactId>
+    	<version>1.0</version>
+  	</parent>
+	
+	<dependencies>				
+		
+		<!-- Homero -->
+	    <dependency>
+	      <groupId>com.walmart.homero.persistence</groupId>
+	      <artifactId>homero-persistence-jpa</artifactId>
+	    </dependency>
+	    
+	    <dependency>
+	      <groupId>com.walmart.homero.logger</groupId>
+	      <artifactId>homero-logger-base</artifactId>
+	    </dependency>
+		
+		<!-- local dependencies -->
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+  			<artifactId>personaservice-commons</artifactId>
+		</dependency>	
+		
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+  			<artifactId>personaservice-model</artifactId>
+		</dependency>	
+		
+		<!-- JEE -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- Junit -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <scope>test</scope>
+	    </dependency>
+	</dependencies>
+	
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>

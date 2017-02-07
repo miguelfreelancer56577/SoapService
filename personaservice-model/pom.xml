@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.walmart.service</groupId>
+  	<artifactId>personaservice-model</artifactId>
+  	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>generator - Model</name>
+	<description>Model Layer</description>
+
+  	<parent>
+    	<groupId>com.walmart.service</groupId>
+    	<artifactId>personaservice</artifactId>
+    	<version>1.0</version>
+  	</parent>
+	
+	<dependencies>
+		
+		<!-- JEE -->
+		<dependency>
+      		<groupId>javax</groupId>
+      		<artifactId>javaee-api</artifactId>
+      		<scope>provided</scope>
+    	</dependency>
+    	<!-- homero persistence -->
+    	<dependency>
+		    <groupId>com.walmart.homero.persistence</groupId>
+		    <artifactId>homero-persistence-jpa</artifactId>
+		</dependency>
+		<!-- Apache Commons -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+		<!-- local dependencies -->
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+  			<artifactId>personaservice-commons</artifactId>
+		</dependency>	
+	</dependencies>
+</project>

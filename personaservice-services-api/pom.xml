@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.walmart.service</groupId>
+  	<artifactId>personaservice-services-api</artifactId>
+  	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>generator - Services API</name>
+	<description>Services API Layer</description>
+
+  	<parent>
+    	<groupId>com.walmart.service</groupId>
+    	<artifactId>personaservice</artifactId>
+    	<version>1.0</version>
+  	</parent>
+	
+	<dependencies>
+		<dependency>
+	      <groupId>javax</groupId>
+	      <artifactId>javaee-api</artifactId>
+	      <scope>provided</scope>
+	    </dependency>
+	    
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+  			<artifactId>personaservice-commons</artifactId>
+		</dependency>	
+		
+	</dependencies>
+</project>

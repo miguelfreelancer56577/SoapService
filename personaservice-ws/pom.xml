@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.walmart.service</groupId>
+  	<artifactId>personaservice-ws</artifactId>
+  	<version>1.0</version>
+	<packaging>war</packaging>
+	<name>generator - WS Module</name>
+	<description>Web Services Layer</description>
+
+  	<parent>
+    	<groupId>com.walmart.service</groupId>
+    	<artifactId>personaservice</artifactId>
+    	<version>1.0</version>
+  	</parent>
+	
+	<dependencies>
+		<!-- JEE  -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+		</dependency>
+		
+		<!-- local -->
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+			<artifactId>personaservice-api</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+			<artifactId>personaservice-commons</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+			<artifactId>personaservice-services-api</artifactId>
+		</dependency>
+		
+		<!-- Homero -->
+	    <dependency>
+	      <groupId>com.walmart.homero.logger</groupId>
+	      <artifactId>homero-logger-base</artifactId>
+	    </dependency>
+				
+		<!-- Junit -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <scope>test</scope>
+	    </dependency>
+	    
+	    <!-- Dozer -->
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+		</dependency>
+	</dependencies>	
+</project>

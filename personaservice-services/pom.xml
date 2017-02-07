@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.walmart.service</groupId>
+  	<artifactId>personaservice-services</artifactId>
+  	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>generator - Services Impl</name>
+	<description>Services Implementation Layer</description>
+
+  	<parent>
+    	<groupId>com.walmart.service</groupId>
+    	<artifactId>personaservice</artifactId>
+    	<version>1.0</version>
+  	</parent>
+	
+	<dependencies>
+		<!-- local dependencies -->
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+			<artifactId>personaservice-commons</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+			<artifactId>personaservice-persistence</artifactId>
+			<type>ejb</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+			<artifactId>personaservice-services-api</artifactId>
+		</dependency>
+		
+		 <!-- Homero -->
+	    <dependency>
+	      <groupId>com.walmart.homero.logger</groupId>
+	      <artifactId>homero-logger-base</artifactId>
+	    </dependency>
+
+	    <!-- Dozer -->
+	    <dependency>
+	    	<groupId>net.sf.dozer</groupId>
+	    	<artifactId>dozer</artifactId>
+	    	<version>5.5.1</version>
+	    </dependency>
+		
+		<!-- JEE -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		 <!-- Junit -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <scope>test</scope>
+	    </dependency>
+	    
+	    <dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>saxon-dom</artifactId>
+			<version>8.7</version>
+		</dependency>
+		
+	</dependencies>
+	
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>

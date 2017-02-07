@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	 
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.walmart.service</groupId>
+	  	<artifactId>personaservice-api</artifactId>
+  	<version>1.0</version>
+  	<packaging>jar</packaging>
+  	<name>generator - Api</name>
+  	<description>Api Layer</description>
+  	
+  	<parent>
+    	<groupId>com.walmart.service</groupId>
+    	<artifactId>personaservice</artifactId>
+    	<version>1.0</version>
+  	</parent>
+  			
+  		<dependencies>
+			<dependency>
+				<groupId>com.walmart.homero</groupId>
+				<artifactId>homero-api</artifactId>
+				<version>1.1</version>
+			</dependency>
+		</dependencies>	
+
+  		 <build>
+		    <pluginManagement>
+		      <plugins>
+		        <plugin>
+		          <groupId>org.codehaus.mojo</groupId>
+		          <artifactId>sonar-maven-plugin</artifactId>
+		          <version>2.3</version>
+		          <configuration>
+		            <sonar.sources>src/main/java</sonar.sources>
+		            <sonar.exclusions>file:**/src/main/java/**/*</sonar.exclusions>
+		          </configuration>
+		        </plugin>
+		      </plugins>
+		    </pluginManagement>
+  		</build>
+  		
+  		
+  </project>

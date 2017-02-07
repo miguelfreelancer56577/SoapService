@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.walmart.service</groupId>
+  	<artifactId>personaservice-commons</artifactId>
+  	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>generator - Commons</name>
+	<description>Commons Layer</description>
+
+  	<parent>
+    	<groupId>com.walmart.service</groupId>
+    	<artifactId>personaservice</artifactId>
+    	<version>1.0</version>
+  	</parent>
+	 
+	
+	<dependencies>
+		<!-- Homero -->
+	    <dependency>
+	      <groupId>com.walmart.homero</groupId>
+	      <artifactId>homero-commons</artifactId>
+	    </dependency>
+		
+	 	<!-- Junit -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <scope>test</scope>
+	    </dependency>
+	    
+	    <!-- Apache Commons Lang -->
+	    <dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+    </dependencies>	
+</project>
