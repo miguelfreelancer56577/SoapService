@@ -75,6 +75,42 @@
 		            </configuration>
 		        </plugin>
 		        
+		        <plugin> 
+		        <!-- doc: http://www.mojohaus.org/jaxws-maven-plugin/plugin-info.html -->
+		            <groupId>org.codehaus.mojo</groupId>
+		            <artifactId>jaxws-maven-plugin</artifactId>
+		            <version>1.12</version>
+		            <executions> 
+		                <execution> 
+		                    <id>wsimport-from-jdk</id>
+		                    <goals>
+		                    <!-- jaxws:wsimport -->
+		                        <goal>wsimport</goal>
+		                    </goals>
+		                </execution>
+		            </executions>
+		            <configuration>
+		                <!-- using wsdl from an url -->
+		                <!-- <wsdlUrls>
+		                    <wsdlUrl>
+		                        http://myWSDLurl?wsdl
+		                    </wsdlUrl>
+		                </wsdlUrls> -->
+		                <!-- or using wsdls file directory -->
+		                    <wsdlDirectory>src/main/resources</wsdlDirectory>
+		                <!-- which wsdl file -->
+		                <wsdlFiles>
+		                    <wsdlFile>DescriptionNote.wsdl</wsdlFile>
+		                </wsdlFiles>
+		                <!-- Keep generated files -->
+		                <keep>true</keep> 
+		                <!-- Package name --> 
+		                <packageName>com.mangelt.test</packageName> 
+		                <!-- generated source files destination-->
+		                <sourceDestDir>src/main/java</sourceDestDir>
+		            </configuration>
+		        </plugin>
+		        
 		      </plugins>
 		    </pluginManagement>
   		</build>
