@@ -11,17 +11,17 @@
     <xsd:schema targetNamespace="http://www.w3.org/2001/XMLSchema">
     	<xsd:import 
     		namespace="http://www.example.org/DescriptionNote/"
-        	schemaLocation="note.xsd">
+        	schemaLocation="types.xsd">
        	</xsd:import>
     </xsd:schema>
   </wsdl:types>
   
   <wsdl:message name="NewOperationRequest">
-    <wsdl:part element="nt:Note" name="parameters"/>
+    <wsdl:part element="nt:employee" name="parameters"/>
   </wsdl:message>
   
   <wsdl:message name="NewOperationResponse">
-    <wsdl:part element="nt:Note" name="parameters"/>
+    <wsdl:part element="nt:note" name="parameters"/>
   </wsdl:message>
   
   <wsdl:portType name="DescriptionNote">

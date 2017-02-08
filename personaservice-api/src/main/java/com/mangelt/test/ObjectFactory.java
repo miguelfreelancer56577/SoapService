@@ -37,4 +37,12 @@ public class ObjectFactory {
         return new Note();
     }
 
+    /**
+     * Create an instance of {@link Employee }
+     * 
+     */
+    public Employee createEmployee() {
+        return new Employee();
+    }
+
 }

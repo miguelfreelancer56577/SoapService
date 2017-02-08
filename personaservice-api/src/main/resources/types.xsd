@@ -4,7 +4,16 @@
 	targetNamespace="http://www.example.org/DescriptionNote/"
 	xmlns:nt="http://www.example.org/DescriptionNote/">
 
-<xs:element name="Note">
+<xs:element name="employee">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="firstname" type="xs:string"/>
+      <xs:element name="lastname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="note">
   <xs:complexType>
     <xs:sequence>
       <xs:element name="to" type="xs:string"/>

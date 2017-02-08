@@ -7,7 +7,6 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.ws.Holder;
 
 
 /**
@@ -27,11 +26,13 @@ public interface DescriptionNote {
     /**
      * 
      * @param parameters
+     * @return
+     *     returns com.mangelt.test.Note
      */
     @WebMethod(operationName = "NewOperation", action = "http://www.example.org/DescriptionNote/NewOperation")
-    @WebResult(name = "Note", targetNamespace = "http://www.example.org/DescriptionNote/", partName = "parameters")
+    @WebResult(name = "note", targetNamespace = "http://www.example.org/DescriptionNote/", partName = "parameters")
     public Note newOperation(
-        @WebParam(name = "Note", targetNamespace = "http://www.example.org/DescriptionNote/", partName = "parameters")
-        Note parameters);
+        @WebParam(name = "employee", targetNamespace = "http://www.example.org/DescriptionNote/", partName = "parameters")
+        Employee parameters);
 
 }

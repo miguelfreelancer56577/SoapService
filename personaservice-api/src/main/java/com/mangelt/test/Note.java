@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
     "heading",
     "body"
 })
-@XmlRootElement(name = "Note")
+@XmlRootElement(name = "note")
 public class Note {
 
     @XmlElement(required = true)
