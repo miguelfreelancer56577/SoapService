@@ -37,6 +37,10 @@
 		<dependency>
 			<groupId>com.walmart.service</groupId>
   			<artifactId>personaservice-commons</artifactId>
-		</dependency>	
+		</dependency>
+		<dependency>
+			<groupId>com.walmart.service</groupId>
+			<artifactId>personaservice-model</artifactId>
+		</dependency>
 	</dependencies>
 </project>

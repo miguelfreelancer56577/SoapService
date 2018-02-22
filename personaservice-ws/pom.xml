@@ -30,7 +30,8 @@
 		
 		<dependency>
 			<groupId>com.walmart.service</groupId>
-			<artifactId>personaservice-commons</artifactId>
+			<artifactId>personaservice-persistence</artifactId>
+			<type>ejb</type>
 		</dependency>
 		
 		<dependency>
