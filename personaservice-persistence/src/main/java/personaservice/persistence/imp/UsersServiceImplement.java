@@ -7,13 +7,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import com.walmart.homero.logger.Logger;
-import com.walmart.homero.logger.LoggerFactory;
-
-import personaservice.model.domain.Users;
+import personaservice.api.ws.User;
 import personaservice.persistence.service.UsersService;
 
 @Stateless
@@ -24,7 +20,7 @@ public class UsersServiceImplement implements UsersService {
 	EntityManager entityManager;
 	
 	@Override
-	public List<Users> getAllusers() {
+	public List<User> getAllusers() {
 		
 		entityManager = factory.createEntityManager();
 		
@@ -32,7 +28,7 @@ public class UsersServiceImplement implements UsersService {
 		
 		Query query = entityManager.createNamedQuery("Users.findAll");
 		
-		List<Users> users = null;
+		List<User> users = null;
 		
 	    try {
 	    	users = query.getResultList();
@@ -49,13 +45,13 @@ public class UsersServiceImplement implements UsersService {
 	}
 
 	@Override
-	public Users getById() {
+	public User getById() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Users getByLogin() {
+	public User getByLogin() {
 		// TODO Auto-generated method stub
 		return null;
 	}

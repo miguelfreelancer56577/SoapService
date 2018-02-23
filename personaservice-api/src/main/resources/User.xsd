@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http:/walmart.com.mx/PersonaService/"
+	xmlns:nt="http:/walmart.com.mx/User/">
+
+<xs:element name="User">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="id" type="xs:long" nillable="false" />
+			<xs:element name="login" type="xs:string" nillable="false" />
+			<xs:element name="password" type="xs:string" nillable="false" />
+			<xs:element name="first_name" type="xs:string" nillable="false" />
+			<xs:element name="last_name" type="xs:string" nillable="false" />
+			<xs:element name="email" type="xs:string" nillable="false" />
+			<xs:element name="activated" type="xs:int" nillable="false" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>

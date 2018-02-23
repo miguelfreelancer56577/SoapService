@@ -4,15 +4,15 @@ import java.util.List;
 
 import javax.ejb.Local;
 
-import personaservice.model.domain.Users;
+import personaservice.api.ws.User;
 
 @Local
 public interface UsersService {
 
-	List<Users> getAllusers();
+	List<User> getAllusers();
 	
-	Users getById();
+	User getById();
 	
-	Users getByLogin(); 
+	User getByLogin(); 
 	
 }

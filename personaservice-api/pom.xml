@@ -21,6 +21,12 @@
 				<artifactId>homero-api</artifactId>
 				<version>1.1</version>
 			</dependency>
+			<!-- JEE -->
+			<dependency>
+	      		<groupId>javax</groupId>
+	      		<artifactId>javaee-api</artifactId>
+	      		<scope>provided</scope>
+	    	</dependency>
 		</dependencies>	
 
   		 <build>
@@ -100,12 +106,14 @@
 		                    <wsdlDirectory>src/main/resources</wsdlDirectory>
 		                <!-- which wsdl file -->
 		                <wsdlFiles>
-		                    <wsdlFile>DescriptionNote.wsdl</wsdlFile>
+		                    <!-- <wsdlFile>DescriptionNote.wsdl</wsdlFile> -->
+		                    <wsdlFile>PersonaService.wsdl</wsdlFile>
 		                </wsdlFiles>
 		                <!-- Keep generated files -->
 		                <keep>true</keep> 
 		                <!-- Package name --> 
-		                <packageName>com.mangelt.test</packageName> 
+		                <!-- <packageName>com.mangelt.test</packageName> -->
+		                <packageName>personaservice.api.ws</packageName>
 		                <!-- generated source files destination-->
 		                <sourceDestDir>src/main/java</sourceDestDir>
 		            </configuration>

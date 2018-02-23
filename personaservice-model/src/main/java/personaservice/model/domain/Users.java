@@ -51,26 +51,26 @@ public class Users {
   private static final long serialVersionUID = 6642459476354025421L;
 
   @Id
-  @Column(name = "id")
+  @Column(name = "id", nullable=false)
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
-  @Column(name = "login")
+  @Column(name = "login", nullable=false)
   private String login;
   
-  @Column(name = "password")
+  @Column(name = "password", nullable=false)
   private String password;
   
-  @Column(name = "first_name")
+  @Column(name = "first_name", nullable=false)
   private String first_name;
   
-  @Column(name = "last_name")
+  @Column(name = "last_name", nullable=false)
   private String last_name;
   
-  @Column(name = "email")
+  @Column(name = "email", nullable=false)
   private String email;
   
-  @Column(name = "activated")
+  @Column(name = "activated", nullable=false)
   private int activated;
   
   
