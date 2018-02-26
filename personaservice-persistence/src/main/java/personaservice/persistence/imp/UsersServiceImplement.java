@@ -26,7 +26,7 @@ public class UsersServiceImplement implements UsersService {
 		
 		entityManager.getTransaction().begin();
 		
-		Query query = entityManager.createNamedQuery("Users.findAll");
+		Query query = entityManager.createNamedQuery("User.findAll");
 		
 		List<User> users = null;
 		
@@ -37,7 +37,7 @@ public class UsersServiceImplement implements UsersService {
 	    	
 	    	entityManager.getTransaction().commit();
 			
-			entityManager.close();
+//			entityManager.close();
 			
 	    }
 	    
