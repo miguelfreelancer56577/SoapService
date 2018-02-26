@@ -1,7 +1,10 @@
 
 package personaservice.api.ws;
 
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
 
 
 /**
@@ -21,6 +24,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _Users_QNAME = new QName("http:/walmart.com.mx/user/", "Users");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: personaservice.api.ws
@@ -35,6 +39,23 @@ public class ObjectFactory {
      */
     public User createUser() {
         return new User();
+    }
+
+    /**
+     * Create an instance of {@link UserList }
+     * 
+     */
+    public UserList createUserList() {
+        return new UserList();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UserList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http:/walmart.com.mx/user/", name = "Users")
+    public JAXBElement<UserList> createUsers(UserList value) {
+        return new JAXBElement<UserList>(_Users_QNAME, UserList.class, null, value);
     }
 
 }

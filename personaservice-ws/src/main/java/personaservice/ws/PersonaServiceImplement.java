@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import personaservice.api.ws.PersonaService;
 import personaservice.api.ws.User;
+import personaservice.api.ws.UserList;
 import personaservice.persistence.service.UsersService;
 import test.ws.DescriptionNoteImpl;
 
@@ -21,15 +22,22 @@ public class PersonaServiceImplement implements PersonaService {
 	UsersService usersService;
 	
 	@Override
-	public User getAllUsers() {
+	public UserList getAllUsers() {
+		
+		UserList userList = null;
 		
 		logger.info("getting all users");
 		
 		List<User> users = usersService.getAllusers();
 		
+		if(users != null){
+			userList = new UserList();
+			userList.setUsers(users);
+		}
+		
 		logger.info("It's been gotten all records.");
 		
-		return null;
+		return userList;
 	}
 
 }

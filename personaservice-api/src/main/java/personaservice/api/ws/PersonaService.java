@@ -25,10 +25,10 @@ public interface PersonaService {
     /**
      * 
      * @return
-     *     returns personaservice.api.ws.User
+     *     returns personaservice.api.ws.UserList
      */
     @WebMethod(operationName = "GetAllUsers", action = "http:/walmart.com.mx/PersonaService/GetAllUsers")
-    @WebResult(name = "User", targetNamespace = "http:/walmart.com.mx/PersonaService/", partName = "parameters")
-    public User getAllUsers();
+    @WebResult(name = "Users", targetNamespace = "http:/walmart.com.mx/user/", partName = "parameters")
+    public UserList getAllUsers();
 
 }
