@@ -1,12 +1,15 @@
 package personaservice.ws;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.ejb.EJB;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 
 import org.apache.log4j.Logger;
 
+import personaservice.api.ws.LoginParams;
 import personaservice.api.ws.PersonaService;
 import personaservice.api.ws.User;
 import personaservice.api.ws.UserList;
@@ -24,9 +27,9 @@ public class PersonaServiceImplement implements PersonaService {
 	@Override
 	public UserList getAllUsers() {
 		
-		long threadId = Thread.currentThread().getId();
+		String threadId = UUID.randomUUID().toString();
 		
-		logger.info("[REST][Thread] # " + threadId + " has started."); 
+		logger.info("[SOAP][Thread] # " + threadId + " has started."); 
 		
 		UserList userList = null;
 		
@@ -41,9 +44,25 @@ public class PersonaServiceImplement implements PersonaService {
 		
 		logger.info("It's been gotten all records.");
 		
-		logger.info("[REST][Thread] # " + threadId + "has finished.");
+		logger.info("[SOAP][Thread] # " + threadId + " has finished.");
 		
 		return userList;
+	}
+	
+	@Override
+	public User getUserLogin(LoginParams loginParams){
+		
+		String threadId = UUID.randomUUID().toString();
+		
+		logger.info("[SOAP][Thread] # " + threadId + " has started."); 
+		
+		User user = usersService.getByLogin(loginParams.getLogin(), loginParams.getPassword());
+		
+		logger.info("It's been found one record.");
+		
+		logger.info("[SOAP][Thread] # " + threadId + " has finished.");
+		
+		return user;
 	}
 
 }

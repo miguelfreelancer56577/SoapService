@@ -51,9 +51,30 @@ public class UsersServiceImplement implements UsersService {
 	}
 
 	@Override
-	public User getByLogin() {
-		// TODO Auto-generated method stub
-		return null;
+	public User getByLogin(String login, String password) {
+		
+		 entityManager = factory.createEntityManager();
+		
+		entityManager.getTransaction().begin();
+		
+		Query query = entityManager.createNamedQuery("User.getByLogin");
+		
+		query.setParameter("login", login);
+		
+		query.setParameter("password", password);
+		
+		User user = null;
+		
+	    try {
+	    	user = (User) query.getSingleResult();
+	    } catch (NoResultException e) {
+	    }finally{
+	    	
+	    	entityManager.getTransaction().commit();
+			
+	    }
+	    
+		return user;
 	}
 
 }

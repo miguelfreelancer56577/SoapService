@@ -2,6 +2,7 @@
 package personaservice.api.ws;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -30,5 +31,17 @@ public interface PersonaService {
     @WebMethod(operationName = "GetAllUsers", action = "http:/walmart.com.mx/PersonaService/GetAllUsers")
     @WebResult(name = "Users", targetNamespace = "http:/walmart.com.mx/user/", partName = "parameters")
     public UserList getAllUsers();
+
+    /**
+     * 
+     * @param parameters
+     * @return
+     *     returns personaservice.api.ws.User
+     */
+    @WebMethod(operationName = "GetUserLogin", action = "http:/walmart.com.mx/PersonaService/GetAllUsers")
+    @WebResult(name = "User", targetNamespace = "http:/walmart.com.mx/user/", partName = "parameters")
+    public User getUserLogin(
+        @WebParam(name = "LoginParams", targetNamespace = "http:/walmart.com.mx/user/", partName = "parameters")
+        LoginParams parameters);
 
 }

@@ -13,6 +13,6 @@ public interface UsersService {
 	
 	User getById();
 	
-	User getByLogin(); 
+	User getByLogin(String login, String password); 
 	
 }

@@ -24,6 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _User_QNAME = new QName("http:/walmart.com.mx/user/", "User");
+    private final static QName _LoginParams_QNAME = new QName("http:/walmart.com.mx/user/", "LoginParams");
     private final static QName _Users_QNAME = new QName("http:/walmart.com.mx/user/", "Users");
 
     /**
@@ -31,6 +33,22 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link UserList }
+     * 
+     */
+    public UserList createUserList() {
+        return new UserList();
+    }
+
+    /**
+     * Create an instance of {@link LoginParams }
+     * 
+     */
+    public LoginParams createLoginParams() {
+        return new LoginParams();
     }
 
     /**
@@ -42,11 +60,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UserList }
+     * Create an instance of {@link JAXBElement }{@code <}{@link User }{@code >}}
      * 
      */
-    public UserList createUserList() {
-        return new UserList();
+    @XmlElementDecl(namespace = "http:/walmart.com.mx/user/", name = "User")
+    public JAXBElement<User> createUser(User value) {
+        return new JAXBElement<User>(_User_QNAME, User.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginParams }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http:/walmart.com.mx/user/", name = "LoginParams")
+    public JAXBElement<LoginParams> createLoginParams(LoginParams value) {
+        return new JAXBElement<LoginParams>(_LoginParams_QNAME, LoginParams.class, null, value);
     }
 
     /**

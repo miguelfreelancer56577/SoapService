@@ -20,6 +20,8 @@
 	</xs:complexType>
 <!-- </xs:element> -->
 
+<xs:element name="User" type="User"></xs:element>
+
 
 <xs:complexType name="UserList">
       <xs:sequence>
@@ -29,5 +31,14 @@
 
 
 <xs:element name="Users" type="UserList"></xs:element>
+
+<xs:complexType name="LoginParams">
+	<xs:sequence>
+		<xs:element name="login" type="xs:string" nillable="false" />
+		<xs:element name="password" type="xs:string" nillable="false" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:element name="LoginParams" type="LoginParams"></xs:element>
 
 </xs:schema>

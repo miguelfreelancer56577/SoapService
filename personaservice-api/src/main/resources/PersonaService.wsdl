@@ -25,16 +25,37 @@
     <wsdl:part element="us:Users" name="parameters"/>
   </wsdl:message>
   
+  <wsdl:message name="GetUsersLoginRequest">
+    <wsdl:part element="us:LoginParams" name="parameters"/>
+  </wsdl:message>
+  
+  <wsdl:message name="GetUsersLoginResponse">
+    <wsdl:part element="us:User" name="parameters"/>
+  </wsdl:message>
+  
   <wsdl:portType name="PersonaService">
     <wsdl:operation name="GetAllUsers">
       <wsdl:input message="sr:GetAllUsersRequest"/>
       <wsdl:output message="sr:GetAllUsersResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
+      <wsdl:input message="sr:GetUsersLoginRequest"/>
+      <wsdl:output message="sr:GetUsersLoginResponse"/>
     </wsdl:operation>
   </wsdl:portType>
   
   <wsdl:binding name="PersonaServiceSOAP" type="sr:PersonaService">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http:/walmart.com.mx/PersonaService/GetAllUsers"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserLogin">
       <soap:operation soapAction="http:/walmart.com.mx/PersonaService/GetAllUsers"/>
       <wsdl:input>
         <soap:body use="literal"/>
