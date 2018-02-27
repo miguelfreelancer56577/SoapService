@@ -54,7 +54,7 @@ import javax.xml.bind.annotation.XmlType;
 @Table(name = "users")
 @NamedQueries({
 	@NamedQuery(name = "User.findAll", query = "SELECT c FROM User c"),
-	@NamedQuery(name = "User.getById", query = "SELECT cp FROM User cp WHERE cp.id = :id"),
+	@NamedQuery(name = "User.getById", query = "SELECT cp FROM User cp WHERE cp.login = :login and cp.password = :password"),
 	@NamedQuery(name = "User.getByLogin", query = "SELECT cp FROM User cp WHERE cp.login= :login")
 })
 public class User {

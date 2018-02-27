@@ -25,6 +25,10 @@ public class PersonaServices {
 	@RequestMapping(value="/users", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<UserList> getAllUsers(){
 		
+		long threadId = Thread.currentThread().getId();
+		
+		System.out.println("[REST][Thread] # " + threadId + " has started."); 
+		
 		ResponseEntity<UserList> reponse = null;
 		
 		UserList userList = null;
@@ -40,6 +44,8 @@ public class PersonaServices {
 		}
 		
 		System.out.println("It's been gotten all records.");
+		
+		System.out.println("[REST][Thread] # " + threadId + " has finished.");
 		
 		return reponse;
 		

@@ -24,6 +24,10 @@ public class PersonaServiceImplement implements PersonaService {
 	@Override
 	public UserList getAllUsers() {
 		
+		long threadId = Thread.currentThread().getId();
+		
+		logger.info("[REST][Thread] # " + threadId + " has started."); 
+		
 		UserList userList = null;
 		
 		logger.info("getting all users");
@@ -36,6 +40,8 @@ public class PersonaServiceImplement implements PersonaService {
 		}
 		
 		logger.info("It's been gotten all records.");
+		
+		logger.info("[REST][Thread] # " + threadId + "has finished.");
 		
 		return userList;
 	}
